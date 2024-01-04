@@ -1,0 +1,92 @@
+////Dizi: [22, 27, 16, 2, 18, 6]
+
+Adım: [22, 27, 16, 2, 18, 6]
+Adım: [22, 27, 16, 2, 18, 6] (2 sıralandı)
+Adım: [16, 22, 27, 2, 18, 6]
+Adım: [2, 16, 22, 27, 18, 6]
+Adım: [2, 16, 18, 22, 27, 6]
+Adım: [2, 6, 16, 18, 22, 27] (Dizi tamamen sıralandı)
+Bu durumda, dizinin sıralanması için toplam 5 adım gerekmektedir.
+
+Insertion Sort'un time complexity (zaman karmaşıklığı) ise O(n^2) şeklinde ifade edilir, n dizinin eleman sayısını temsil eder.
+
+Dizi sıralandıktan sonra, 18 sayısı için:
+
+Average case: Aradığımız sayının ortada olması durumunda sıralama algoritması hala O(n^2) olduğu için ortalama durumda da performans pek iyi değildir.
+
+Worst case: Aradığımız sayının sonda olması durumunda, sıralama algoritması her zaman tüm diziyi kontrol etmek zorunda olduğu için yine O(n^2) zaman karmaşıklığına sahiptir.
+
+Best case: Aradığımız sayının dizinin en başında olması durumunda bile, sıralama algoritması her zaman tüm elemanları kontrol etmek zorundadır, bu nedenle yine O(n^2) zaman karmaşıklığı geçerlidir.
+Verilen dizinin Selection Sort'a göre ilk 4 adımını aşağıda bulabilirsiniz:
+
+///Dizi: [7, 3, 5, 8, 2, 9, 4, 15, 6]
+
+Adım: [2, 3, 5, 8, 7, 9, 4, 15, 6] (Minimum eleman olan 2, dizinin ilk elemanıyla yer değiştirdi.)
+Adım: [2, 3, 5, 8, 7, 9, 4, 15, 6] (Dizinin ikinci elemanı zaten en küçük olduğu için değişiklik olmadı.)
+Adım: [2, 3, 4, 8, 7, 9, 5, 15, 6] (Minimum eleman olan 4, dizinin üçüncü elemanıyla yer değiştirdi.)
+Adım: [2, 3, 4, 5, 7, 9, 8, 15, 6] (Minimum eleman olan 5, dizinin dördüncü elemanıyla yer değiştirdi.)
+Bu şekilde devam ederek diziyi sıralama işlemi tamamlanacaktır.
+
+
+
+
+///Merge Sort'a göre verilen dizinin sıralanma aşamaları aşağıda belirtilmiştir:
+
+Dizi: [16, 21, 11, 8, 12, 22]
+
+Adım: [16, 21, 11] | [8, 12, 22]
+
+Sol yarı: [16, 21, 11]
+Sağ yarı: [8, 12, 22]
+Adım: [16] | [21, 11] | [8] | [12, 22]
+
+Sol yarı: [16]
+Sağ yarı: [21, 11]
+Sol yarı: [8]
+Sağ yarı: [12, 22]
+Adım: [16] | [11, 21] | [8] | [12, 22]
+
+Sol yarı: [16]
+Sağ yarı: [11, 21]
+Sol yarı: [8]
+Sağ yarı: [12, 22]
+Adım: [11, 16, 21] | [8, 12, 22]
+
+Adım: [8, 11, 12, 16, 21, 22]
+
+Bu aşamalar sonucunda, dizi Merge Sort kullanılarak sıralanmış olur.
+
+Merge Sort'un time complexity (zaman karmaşıklığı) ise O(n log n) şeklinde ifade edilir, n dizinin eleman sayısını temsil eder. Bu algoritma, büyük veri setlerinde efektif bir şekilde çalışabilir.
+
+////Verilen dizinin Binary Search Tree (BST) oluşturulması için aşamalar aşağıdaki gibi olacaktır:
+
+Adım: 7 (root)
+
+Adım:
+
+5 (7'nin solunda)
+Adım:
+
+1 (5'in solunda)
+8 (7'nin sağında)
+Adım:
+
+0 (1'in solunda)
+3 (1'in sağında)
+6 (5'in sağında)
+Adım:
+
+9 (8'in sağında)
+Adım:
+
+4 (3'ün sağında)
+2 (3'ün solunda)
+        7
+       / \
+      5   8
+     / \   \
+    1   6   9
+   / \     /
+  0   3   4
+     /
+    2
